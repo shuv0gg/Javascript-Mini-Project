@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Transition</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@5"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <body>
+    <h1 class="text-center text-5xl text-black font-bold my-4">Goriber Bank</h1>
+    <div class="flex mx-auto gap-8 justify-center">
+      <fieldset
+        class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4"
+      >
+        <legend class="fieldset-legend">Deposit</legend>
+
+        <label class="label">Amount</label>
+        <input
+          id="deposit-amount"
+          type="number"
+          class="input"
+          placeholder="Amount to Deposit..."
+        />
+
+        <button id="deposit-btn" class="btn bg-green-600 mt-4 text-white">
+          Deposit
+        </button>
+      </fieldset>
+      <fieldset
+        class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4"
+      >
+        <legend class="fieldset-legend">Withdraw</legend>
+
+        <label class="label">Amount</label>
+        <input
+          id="withdraw-amount"
+          type="number"
+          class="input"
+          placeholder="Amount to Withdraw..."
+        />
+
+        <button id="withdraw-btn" class="btn bg-red-600 mt-4 text-white">
+          Withdraw
+        </button>
+      </fieldset>
+    </div>
+
+    <h3 class="font-bold text-center text-2xl my-5">
+      Total Amount: <span id="total-amount">0</span>BDT
+    </h3>
+    <h3 class="font-bold text-center text-2xl my-5">Transaction History</h3>
+    <ul id="history" class="w-[300px] mx-auto space-y-2 text-center"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>
